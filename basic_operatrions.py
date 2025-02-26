@@ -45,6 +45,12 @@ for row in matrix:
 for row in matrix:
     print(' '.join(map(str, row)))
 
+for row in matrix:
+    for element in row:
+        print(element, end=' ')  # Print each element with a space
+    print()  # Print a newline after each row
+
+
 my_string = "Hello, Python!"
 try:
     my_string[7] = 'W' # Trying to replace 'P' with 'W'
@@ -61,7 +67,7 @@ new_list[1] = 200 # modifies the original list as well
 print(original_list)
 
 
-independent_copy = original_list[ : ]
+independent_copy = original_list[ : ] # use copy() or [ : ] to create real copy
 independent_copy[1] = 20
 print(original_list)
 print(independent_copy)
