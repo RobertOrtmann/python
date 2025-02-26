@@ -64,6 +64,21 @@ with open('04_routing_table.txt' , 'r') as file:
         if target_network in line:
             print(line.strip())
 
+with open( '04_ip_addresses.txt' , 'r') as file:
+    ip_addresses = file.readlines()
+# file.readlines() reads all lines of the file and returns them as a list. 
+# Each line contains an IP address, possibly with extra spaces or newlines, 
+# which will be stripped in the next step.
 
+
+# A set automatically removes any duplicates, so no extra processing is needed to ensure uniqueness.
+
+unique_ips = set(ip.strip() for ip in ip_addresses)
+
+with open('04_unique_ip_list.txt', 'w') as output_file:
+    for ip in unique_ips:
+        output_file.write(ip + '\n')
+
+print("Unique IP addresses have been written to '04_unique_ip_list.txt'.")
 
 
