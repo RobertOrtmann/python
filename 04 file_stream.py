@@ -64,7 +64,7 @@ with open('04_routing_table.txt' , 'r') as file:
         if target_network in line:
             print(line.strip())
 
-with open( '04_ip_addresses.txt' , 'r') as file:
+with open( '04_ip_addresses_with_duplicates.txt' , 'r') as file:
     ip_addresses = file.readlines()
 # file.readlines() reads all lines of the file and returns them as a list. 
 # Each line contains an IP address, possibly with extra spaces or newlines, 
