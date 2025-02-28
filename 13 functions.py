@@ -24,3 +24,13 @@ print(ping())
 print(ping("192.168.1.1"))
 print(ping(count=8))
 
+print("TEST")
+a = 'Zmienna_A'
+b = 'test1'
+c = 'test2'
+
+def test():
+    print("Test")
+    print(a)
+
+test()
